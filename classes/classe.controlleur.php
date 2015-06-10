@@ -14,7 +14,7 @@ class controlleur {
 
 	public function __construct($_id_utilisateur){
 		$this->id_utilisateur = $_id_utilisateur;
-		$this->steam_config = new steamConfig();
+		$this->steam_config = steamConfig::getInstance();
 	}
 	
 	public function recuperationListeUtilisateur(){
