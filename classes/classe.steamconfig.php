@@ -3,17 +3,7 @@
  * Configuration de l'api steam
  */
 class steamconfig {
-	// TODO a remplacer par les valeurs des INIs de configuration
-	private $url = 'http://api.steampowered.com/';
-	private $url_friend_list = 'ISteamUser/GetFriendList/v0001/';
-	private $suppl_url = '&relationship=friend';
-	private $url_user_info = 'ISteamUser/GetPlayerSummaries/v0002/';
-	private $url_jeux_liste = 'IPlayerService/GetOwnedGames/v0001/';
-	private $suppl_url_liste = '&appids_filter={appids_filter:';
-	private $url_jeux_info = 'http://store.steampowered.com/api/appdetails/?cc=EE&l=french&v=1&appids=';
-	private $key = '?key=';
-	private $id_steam = '&steamid=';
-	private $list_id_steam = '&steamids=';
+	// TODO : parser Ini
 	private	$api_id;
 
 	public function __construct ($_api_id){
