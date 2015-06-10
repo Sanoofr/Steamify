@@ -25,7 +25,7 @@ class steamConfig {
 
 	public static function &getInstance(){
 		if(!isset(self::$instance)) {
-			self::$instance = new steamconfig();
+			self::$instance = new steamConfig();
 		} else return self::$instance;
 	}
 

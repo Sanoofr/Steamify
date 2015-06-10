@@ -1,7 +1,7 @@
 <?php
-include 'classe.steamConfig.php';
-include 'classe.utilisateur.php';
-include 'classe.jeu.php';
+include 'steamConfig.php';
+include 'utilisateur.php';
+include 'jeu.php';
 /**
  * Controlleur de l'api
  */
