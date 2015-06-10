@@ -17,6 +17,7 @@ class controlleur {
 		$this->steam_config = steamConfig::getInstance();
 	}
 	
+	// ou pas
 	public function recuperationListeUtilisateur(){
 		$url = $this->steam_config->getUrlFriendsList($this->id_utilisateur);
 		$this->last_data = json_decode(file_get_contents($url), true);
