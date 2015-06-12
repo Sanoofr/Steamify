@@ -1,13 +1,36 @@
 <?php
 /**
- * Classe de l'utilisateur
+ * Modèle du json jeu de steam
  */
 class jeu {
+	/**
+	* Id du jeux steam
+	*/
 	private $id = null;
+	
+	/**
+	* Adresse de l'image sous steam
+	*/
 	private $image = null;
+	
+	/**
+	* Nom du jeu sous steam
+	*/
 	private $nom = null;
+	
+	/**
+	* Page du magasin
+	*/
 	private $page_steam = null;
+	
+	/**
+	* Catégorie du jeu
+	*/
 	private $categorie = null;
+	
+	/**
+	* Genre du jeu
+	*/
 	private $genre = null;
 
 	public function __construct($_game_data){
