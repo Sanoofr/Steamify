@@ -2,3 +2,4 @@
 config/key.ini
 .vscode/
 node_modules/
+/.tmp
