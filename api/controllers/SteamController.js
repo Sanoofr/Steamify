@@ -16,6 +16,7 @@ module.exports = {
                 return res.json({
                     todo: 'home() is not implemented yet! But you are logged in :)',
                     token: passport.tokens === undefined ? passport.accessToken : passport.tokens.token
+                    //steam don't stock token in bdd
                 });
             });
     },
