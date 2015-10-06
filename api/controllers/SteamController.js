@@ -9,37 +9,37 @@ module.exports = {
     /**
      * `SteamController.home()`
      */
-    home: function (req, res, options) {
-        var steam = require('steam-web');
+    home: function (req, res) {
+        var constant = require('steamifyCfg');
+        var steamApi = require('steam-web');
 
-        var s = new steam({
-            apiKey: '',
+        var steam = new steamApi({
+            apiKey: constant.keyDev,
             format: 'json' //optional ['json', 'xml', 'vdf']
         });
+        var user;
+        var identif;
         Passport
             .findOne({user: req.user.id})
             .exec(function (err, passport) {
-                var user = passport.identifier;
-
-
-                console.log(user);
-                var identif = user.split("/");
-                s.getPlayerSummaries({
-                    steamids: [identif[5]],
-                    callback: function (err, data) {
-                        console.log(JSON.stringify(data));
-                        //return res.json({data: data});
-                    }
-                })
-                return res.json({
-                    todo: 'home() is not implemented yet! But you are logged in :)',
-                    user: req.user,
-                    token: passport.tokens === undefined ? passport.accessToken : passport.tokens.token
-                    //steam don't stock token in bdd
-                });
-
+                user = passport.identifier;
+                identif = user.split("/");
+                getProfil();
             });
 
+
+        var getProfil = function getProfil() {
+            steam.getPlayerSummaries({
+                steamids: [identif[5]],
+                callback: function (err, data) {
+                    console.log(JSON.stringify(data));
+                    return res.json({data: data});
+                }
+            });
+        }
+    },
+    redirect: function (req, res) {
+        return res.redirect('http://127.0.0.1:8081');
     },
     /**
      * `SteamController.remotehome()`

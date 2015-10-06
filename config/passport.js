@@ -13,7 +13,7 @@
  * For more information on the available providers, check out:
  * http://passportjs.org/guide/providers/
  */
-
+var constant = require('steamifyCfg');
 module.exports.passport = {
     local: {
         strategy: require('passport-local').Strategy
@@ -28,8 +28,8 @@ module.exports.passport = {
         protocol: 'oauth',
         strategy: require('passport-twitter').Strategy,
         options: {
-            consumerKey: '3W7L9oGopXUUB0bioOpi6utQS',
-            consumerSecret: 'eWRQRzaHJrYovCc0sTEJAyzlkkd38zEpSd4XTC9weVCZwXt7MX'
+            consumerKey: '',
+            consumerSecret: ''
         }
     },
 
@@ -82,7 +82,8 @@ module.exports.passport = {
         options: {
             returnURL: 'http://127.0.0.1:1337/auth/steam/return',
             realm: 'http://127.0.0.1:1337/',
-            apiKey: ''
+            profile: true,
+            apiKey: constant.keyDev
         }
     }
 

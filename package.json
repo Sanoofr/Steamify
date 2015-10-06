@@ -27,6 +27,7 @@
     "passport-google-oauth": "^0.2.0",
     "passport-http-bearer": "^1.0.1",
     "passport-local": "^1.0.0",
+    "passport-openid": "^0.4.0",
     "passport-steam": "^0.1.6",
     "passport-twitter": "^1.0.3",
     "rc": "~0.5.0",
@@ -34,6 +35,7 @@
     "sails-disk": "~0.10.0",
     "sails-generate-auth": "^0.3.1",
     "sails-mongo": "^0.11.4",
+    "steam-web": "^0.2.4",
     "validator": "^4.0.6"
   },
   "scripts": {
