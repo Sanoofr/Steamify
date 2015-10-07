@@ -21,5 +21,5 @@ module.exports = function (req, res, next) {
     /**return res.forbidden('You are not permitted to perform this action.');*/
 
     if (req.user)return next();
-    res.redirect('/login');
+    res.redirect('http://127.0.0.1:8081');
 };
