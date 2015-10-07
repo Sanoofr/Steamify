@@ -32,7 +32,7 @@ module.exports.routes = {
      *                                                                          *
      ***************************************************************************/
 
-    '/': 'SteamController.redirect',
+    '/': 'SteamController.connexion',
 
     /***************************************************************************
      *                                                                          *
@@ -43,7 +43,7 @@ module.exports.routes = {
      * for configuration options and examples.                                  *
      *                                                                          *
      ***************************************************************************/
-    '/steam': 'SteamController.home',
+    '/connexion': 'SteamController.connexion',
 
     'get /login': 'AuthController.login',
     'get /logout': 'AuthController.logout',
